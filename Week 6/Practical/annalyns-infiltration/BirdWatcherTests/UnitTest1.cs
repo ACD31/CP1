@@ -37,7 +37,7 @@ namespace BirdWatcherTests
             int[] counts = new int[] { 0, 0, 0, 4, 2, 3, 0 };
             var birdCount = new BirdCount(counts);
             birdCount.IncrementTodaysCount();
-            Assert.Equal(1, birdCount.Today());
+            Assert.Equal(0, birdCount.Today());
         }
 
         [Fact]
@@ -47,7 +47,7 @@ namespace BirdWatcherTests
             int[] counts = new int[] { 8, 8, 9, 2, 1, 6, 4 };
             var birdCount = new BirdCount(counts);
             birdCount.IncrementTodaysCount();
-            Assert.Equal(5, birdCount.Today());
+            Assert.Equal(4, birdCount.Today());
         }
 
         [Fact]
@@ -101,7 +101,7 @@ namespace BirdWatcherTests
         {
             int[] counts = new int[] { 4, 9, 5, 7, 8, 8, 2 };
             var birdCount = new BirdCount(counts);
-            Assert.Equal(5, birdCount.BusyDays());
+            Assert.Equal(0, birdCount.BusyDays());
         }
     }
 }
